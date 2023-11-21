@@ -89,7 +89,7 @@ export class HomePage {
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {
-    this.openModalViewJob(0);
+    // this.openModalViewJob(0);
   }
 
   async openModalViewJob(_index: any) {

@@ -1,4 +1,10 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+//? CONTROLLERS
+import { ModalController } from '@ionic/angular';
+
+//? COMPONENTS
+import { JobViewerComponent } from '../job-viewer/job-viewer.component';
 
 @Component({
   selector: 'app-job',
@@ -6,16 +12,19 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./job.component.scss'],
 })
 export class JobComponent implements OnInit {
-  @Input() data: any;
-  @Input() index: any;
+  @Input() job: any;
 
-  @Output() eventManager: any = new EventEmitter<string>();
-
-  constructor() {}
+  constructor(private modalController: ModalController) {}
 
   ngOnInit() {}
 
-  jobClicked() {
-    this.eventManager.emit(this.index);
+  async openJobViewer() {
+    const modal = await this.modalController.create({
+      component: JobViewerComponent,
+      componentProps: { job: this.job },
+      cssClass: 'modal viewJob',
+    });
+
+    await modal.present();
   }
 }

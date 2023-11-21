@@ -41,6 +41,11 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      &__tags {
+        opacity: 1;
+        transform: translateY(40px);
+      }
     }
   }
 
@@ -56,6 +61,33 @@
     transition: 0.3s;
 
     z-index: 2;
+  }
+
+  &__tags {
+    position: absolute;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition: 0.3s;
+
+    z-index: 2;
+
+    display: flex;
+    gap: 0.5rem;
+
+    .tag {
+      padding: 0.25rem 0.5rem;
+      border-radius: 10rem;
+
+      background-color: var(--c-principal-white-o40);
+
+      transition: 0.3s;
+
+      &:hover {
+        background-color: var(--c-principal-white-o60);
+      }
+    }
   }
 
   &__portrait {

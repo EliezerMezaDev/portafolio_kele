@@ -2,11 +2,8 @@
   <app-header></app-header>
 
   <main class="main">
-    <app-job
-      *ngFor="let job of source; index as i"
-      [data]="job"
-      [index]="i"
-      (eventManager)="openModalViewJob($event)"
-    ></app-job>
+    <app-job-filters class="main__filters" />
+
+    <app-job-list class="main__jobs"></app-job-list>
   </main>
 </div>

@@ -1,3 +1,23 @@
 {
-    
+  "name": "job 1",
+  "client": "Eliezer Meza",
+  "description": "nsectetur gravida. Nunc condimentum",
+  "date": "agosto, 2023",
+  "rol": "Diseñadora",
+  "link": "",
+  "tags": ["fotografia", "diseño"],
+  "source": {
+    "main": {
+      "view": {
+        "front": "jobs/job1/job1_500x500_1.jpg",
+        "back": "jobs/job1/job1_500x500_2.jpg"
+      },
+      "label": "job 1 label"
+    },
+    "others": [
+      "jobs/job1/job1_1200x650_1.jpg",
+      "jobs/job1/job1_1200x650_2.jpg",
+      "jobs/job1/job1.jpg"
+    ]
+  }
 }

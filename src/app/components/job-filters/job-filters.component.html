@@ -1,0 +1,25 @@
+<div class="dropdownContainer">
+  <div (click)="toggleDropdown()" class="select" [ngClass]="{ open: open }">
+    <ng-container *ngIf="optionSelected != ''; else placeholderTemplate">
+      <p class="option-select">
+        <span> {{ optionSelected }} </span>
+      </p>
+    </ng-container>
+
+    <img src="assets/arrow.svg" alt="arrow-icon" class="arrow" />
+  </div>
+
+  <div class="options" [ngClass]="{ open: open }">
+    <div
+      *ngFor="let option of options"
+      class="option"
+      (click)="selectOption(option)"
+    >
+      {{ option }}
+    </div>
+  </div>
+</div>
+
+<ng-template #placeholderTemplate>
+  <span class="withOpacity"> buscar... </span>
+</ng-template>

@@ -1,14 +1,17 @@
-<article class="job" (dblclick)="jobClicked()">
+<article class="job" (dblclick)="openJobViewer()">
   <img
     class="job__portrait"
-    [src]="'assets/' + data.source.main.view.front"
+    [src]="'assets/' + job.source.main.view.front"
     alt="jobPortrait"
   />
   <img
     class="job__portrait --dist"
-    [src]="'assets/' + data.source.main.view.back"
+    [src]="'assets/' + job.source.main.view.back"
     alt="jobPortrait"
   />
 
-  <h4 class="job__label">{{ data.name }}</h4>
+  <h4 class="job__label">{{ job.name }}</h4>
+  <span class="job__tags">
+    <span *ngFor="let tags of job.tags" class="tag"> {{ tags }} </span>
+  </span>
 </article>

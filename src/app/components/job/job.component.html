@@ -1,0 +1,14 @@
+<article class="job" (dblclick)="jobClicked()">
+  <img
+    class="job__portrait"
+    [src]="'assets/' + data.source.main.view.front"
+    alt="jobPortrait"
+  />
+  <img
+    class="job__portrait --dist"
+    [src]="'assets/' + data.source.main.view.back"
+    alt="jobPortrait"
+  />
+
+  <h4 class="job__label">{{ data.name }}</h4>
+</article>

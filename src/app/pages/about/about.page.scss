@@ -1,0 +1,112 @@
+.container-all {
+  .main {
+    width: 1000px;
+    max-height: calc(100% - 75px);
+
+    margin: 2rem auto 0 auto;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+    display: flex;
+    gap: 1rem;
+
+    @media only screen and (max-width: 1050px) {
+      width: 100%;
+      max-height: calc(100% - 50px);
+
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .portrait {
+      width: 350px;
+      height: 350px;
+
+      @media only screen and (max-width: 1050px) {
+        width: 250px;
+        height: 250px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 1rem;
+      }
+    }
+
+    .info {
+      position: relative;
+
+      width: 650px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      @media only screen and (max-width: 1050px) {
+        max-width: 90%;
+        width: 600px;
+      }
+
+      &__title {
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--c-principal-darks);
+      }
+
+      &__tags {
+        margin: -0.75rem 0 0 0;
+        font-size: 1rem;
+        color: var(--c-principal-darks-o80);
+      }
+
+      &__text {
+        font-size: 1rem;
+        color: var(--c-principal-darks-o80);
+        text-align: justify;
+
+        &.--primary {
+          font-size: 1.25rem;
+        }
+
+        &.--secondary {
+          color: var(--c-principal-darks-o80);
+        }
+      }
+
+      &__btn {
+        align-self: flex-end;
+        // position: absolute;
+        // bottom: 0;
+        // right: 0;
+
+        width: 150px;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+        border-radius: 10px;
+
+        background-color: var(--c-principal-darks-o60);
+
+        color: var(--c-principal-white);
+
+        transition: 0.3s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background-color: var(--c-principal-darks-o80);
+        }
+
+        ion-icon {
+          margin: 0 0.5rem -0.15rem 0;
+
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

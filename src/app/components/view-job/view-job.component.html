@@ -1,0 +1,35 @@
+<div class="viewWrapper">
+  <section class="view">
+    <header class="view__head">
+      <h3>
+        {{ data.name }}
+      </h3>
+
+      <p>
+        {{ data.description }}
+      </p>
+    </header>
+
+    <div class="view__items">
+      <span class="view__item">
+        <b> {{ data.name }} </b> | <span> cliente </span>
+      </span>
+
+      <span class="view__item">
+        <b> {{ data.date }} </b> | <span> fecha </span>
+      </span>
+
+      <span class="view__item">
+        <b> {{ data.rol }} </b> | <span> rol </span>
+      </span>
+    </div>
+  </section>
+
+  <div class="source">
+    <img *ngFor="let img of data.source.others" [src]="'assets/' + img" />
+  </div>
+
+  <div class="close" (click)="close()">
+    <ion-icon name="close-circle-outline"></ion-icon>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "portfolio_kele",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
